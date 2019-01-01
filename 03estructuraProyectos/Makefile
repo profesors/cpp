@@ -9,3 +9,4 @@ src/Persona.o: src/Persona.cc
 	
 clean:
 	$(shell find . -name *.o -exec rm {} \;)
+	rm main
