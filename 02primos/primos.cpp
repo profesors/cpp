@@ -9,7 +9,7 @@ int cotaSuperior=100;
 int main(void){
 	cout<<"Cota superior: ";
 	cin>>cotaSuperior;
-	
+
 	for (int n=1; n<=cotaSuperior; n++){
 		if (esPrimo(n)){
 			cout<<n<<endl;
@@ -31,7 +31,8 @@ bool esPrimo(int n){
 						return false;
 						break;
 					}
-				}		
+				}
 			}
 	}
+	return true;
 }
