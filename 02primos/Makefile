@@ -1,2 +1,2 @@
 primos : primos.cpp
-	g++ primos.cpp -o primos
+	g++ primos.cpp -o primos -O3
