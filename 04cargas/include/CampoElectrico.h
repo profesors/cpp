@@ -2,6 +2,13 @@
 #define CampoElectrico_H
 
 namespace CampoElectrico{
+	const double K = 8.99e9;
+
+	struct Vector2d{
+		double x;
+		double y;
+	};
+
 	class Carga{
 		public:
 			float x;
@@ -14,7 +21,7 @@ namespace CampoElectrico{
 
 	};
 
-	double getE(float x, float y, Carga carga[], int size);
+	Vector2d getE(float x, float y, Carga carga[], int size);
 	float distancia(float x1, float y1, float x2, float y2);
 
 }

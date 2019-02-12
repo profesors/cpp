@@ -1,11 +1,16 @@
 CC = g++
 INC = -Iinclude
+TARGET = cargas
+SRCDIR = src
+BINDIR = bin
+OBJ = $(subst $(SRCDIR)/,,$(patsubst %.cc, %.o, $(wildcard $(SRCDIR)/*.cc)))
 
-main: main.cc CampoElectrico.o
-	$(CC) main.cc CampoElectrico.o $(INC) -o main
+$(TARGET): src/main.cc bin/CampoElectrico.o	
+	$(CC) src/main.cc bin/CampoElectrico.o $(INC) -o $(TARGET)
 
-CampoElectrico.o:	CampoElectrico.cc
-	$(CC) CampoElectrico.cc -c $(INC) -o CampoElectrico.o
+# Compila todos los .cc
+bin/%.o	:	src/%.cc
+	$(CC) $< $(INC) -c -o $@
 
 clean:
 	$(shell find . -name *.o -exec rm {} \;)
