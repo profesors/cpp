@@ -7,6 +7,10 @@ CampoElectrico::Carga::Carga(){
 	set(0, 0, 0);
 }
 
+CampoElectrico::Carga::Carga(CampoElectrico::Punto2d p, double q){
+	set(p.x, p.y, q);
+}
+
 CampoElectrico::Carga::Carga(float x, float y, double q){
 	set(x, y, q);
 }

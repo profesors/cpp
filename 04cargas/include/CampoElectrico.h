@@ -9,6 +9,11 @@ namespace CampoElectrico{
 		double y;
 	};
 
+	struct Punto2d{
+		float x;
+		float y;
+	};
+
 	class Carga{
 		public:
 			float x;
@@ -17,11 +22,12 @@ namespace CampoElectrico{
 
 			Carga();
 			Carga(float x, float y, double q);
+			Carga(Punto2d p, double q);
 			void set(float x, float y, double q);
 
 	};
 
-	Vector2d getE(float x0, float y0, float qx, float qy, double carga);
+	Vector2d getE(float x0, float y0, float qx, float qy, double carga);	
 	float distancia(float x1, float y1, float x2, float y2);
 
 }
