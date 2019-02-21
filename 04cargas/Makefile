@@ -1,6 +1,6 @@
 CC = g++
 INC = -Iinclude
-FLAGS = -std=gnu++17
+FLAGS = -std=c++17
 TARGET = cargas
 SRCDIR = src
 BINDIR = bin
@@ -15,6 +15,6 @@ bin/%.o	:	src/%.cc
 
 clean:
 	$(shell find . -name *.o -exec rm {} \;)
-	@rm main
+	@rm $(TARGET)
 
 .PHONY: clean

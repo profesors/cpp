@@ -3,7 +3,8 @@
 
 using namespace std;
 
-int tabla[][3] = {{0, 0, 0},{0, 1, 0},{1, 0, 0},{1, 1, 1}};
+//int tabla[][3] = {{0, 0, 0},{0, 1, 0},{1, 0, 0},{1, 1, 1}};
+int tabla[][3] = {{7, 10, 1},{4, 6, 1},{1, 0, 0},{9, 4, 0}};
 double pesos[] = {0, 0, 0};
 
 int main()
@@ -11,7 +12,7 @@ int main()
 	//cout<<tabla[1][1]<<endl;
 	bool aprendiendo{true};
 	int salida_entera{0}, iteracion{0};
-	double tasa_aprende = 0.1;
+	double tasa_aprende{0.1};
 	while(aprendiendo){
 		++iteracion;
 		aprendiendo = false;
