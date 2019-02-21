@@ -3,17 +3,10 @@
 #include <iomanip>
 #include <math.h>
 
-CampoElectrico::Carga::Carga(){
-	set(0, 0, 0);
-}
+CampoElectrico::Carga::Carga()	:x{0},	y{0},	q{0}{}
+CampoElectrico::Carga::Carga(CampoElectrico::Punto2d p, double q)	:x{p.x},	y{p.y},		q{q}	{}
+CampoElectrico::Carga::Carga(float x, float y, double q)	:x{x},	y{y},	q{q}	{}
 
-CampoElectrico::Carga::Carga(CampoElectrico::Punto2d p, double q){
-	set(p.x, p.y, q);
-}
-
-CampoElectrico::Carga::Carga(float x, float y, double q){
-	set(x, y, q);
-}
 
 void CampoElectrico::Carga::set(float x, float y, double q){
 	this->x = x;
