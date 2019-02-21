@@ -10,9 +10,9 @@ using namespace CampoElectrico;
 
 int main(){
 	ifstream fCargas("cargas.txt");
-	CampoElectrico::Vector2d E={0, 0};
-	float x,y;
-	double q;
+	CampoElectrico::Vector2d E={0, 0};		// Resultado final
+	float x,y;								// Variables de lectura
+	double q;								// Variables de lectura
 	while(fCargas>>x>>y>>q){
 		CampoElectrico::Vector2d E_i = getE(0, 0, x, y, q);
 		E.x += E_i.x;
