@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/08Lectura_y_escritura.dir/main.cpp.o  -o 08Lectura_y_escritura 
